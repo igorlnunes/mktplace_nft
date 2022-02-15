@@ -1,6 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
 
-const projectId = "5a2fbabccb774a38bc71d779a22c311f"
+const projectId = "5a2fbabccb774a38bc71d779a22"
 
 module.exports = {
   networks: {
