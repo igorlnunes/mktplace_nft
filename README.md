@@ -1,6 +1,11 @@
-# Basic Sample Hardhat Project
+# Basic NFT MarketPlace
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+Este projeto de um Marketplace para a compra e venda de NFTs.
+
+Desenvolvedores:
+
+Igor Mateus de Lima Nunes (github.com/igorlnunes)
+Valter Lobo (github.com/valterlobo)
 
 Try running some of the following tasks:
 
