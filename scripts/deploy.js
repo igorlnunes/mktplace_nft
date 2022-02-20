@@ -10,6 +10,10 @@ async function main() {
   const nft = await NFT.deploy(nftMarket.address); //referencia
   await nft.deployed();
   console.log('nft deployed to: ', nft.address);
+  const Klem = await hre.ethers.getContractFactory("Melk");
+  const klem = await Klem.deploy(); //referencia
+  await klem.deployed();
+  console.log('Klem Token deployed to: ', klem.address);
 
 
 }
