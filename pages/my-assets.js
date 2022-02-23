@@ -6,7 +6,7 @@ import Web3Modal from 'web3modal'
 import { nftaddress, nftmarketaddress } from '../config'
 
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
-import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
+import NFTMarket from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
 
 export default function MyAssets() {
     const [nfts, setNfts] = useState([])
@@ -22,7 +22,7 @@ export default function MyAssets() {
         const provider = new ethers.providers.Web3Provider(connection)
         const signer = provider.getSigner()
 
-        const marketContract = new ethers.Contract(nftmarketaddress, Market.abi, signer)
+        const marketContract = new ethers.Contract(nftmarketaddress, NFTMarket.abi, signer)
         const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider)
         const data = await marketContract.fetchMyNFTs()
 
