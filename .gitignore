@@ -33,7 +33,7 @@ yarn-error.log*
 # vercel
 .vercel
 
-node_modules
+/node_modules
 .env
 coverage
 coverage.json
@@ -41,4 +41,3 @@ typechain
 
 #Hardhat files
 cache
-artifacts
