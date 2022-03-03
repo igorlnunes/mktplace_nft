@@ -6,6 +6,7 @@ const rinkebyAPI = process.env.rinkebyAPI;
 
 module.exports = {
   networks: {
+<<<<<<< HEAD
     hardhat: {
       chainId: 1337
     },
@@ -21,6 +22,12 @@ module.exports = {
       url: `https://rinkeby.infura.io/v3/${rinkebyAPI}`,
       accounts: [`${privateKey}`]
     },
+=======
+    rinkeby: {
+        url: `https://rinkeby.infura.io/v3/${rinkebyAPI}`,
+        accounts: [`${privateKey}`]
+      },
+>>>>>>> feat
   },
   solidity: "0.8.4",
 };

@@ -10,6 +10,10 @@ import { nftaddress, nftmarketaddress } from '../config'
 
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import NFTMarket from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
+<<<<<<< HEAD
+=======
+import Header from '../src/components/Header'
+>>>>>>> feat
 
 export default function CreateItem() {
     const [fileUrl, setFileUrl] = useState(null)
@@ -74,21 +78,38 @@ export default function CreateItem() {
         router.push('/')
     }
 
+<<<<<<< HEAD
     return (
         <div className='flex justify-center'>
             <div className='w-1/2 flex flex-col pb-12'>
                 <input
                     placeholder='Asset Name'
+=======
+    function renderizarCriarItens() {
+        return (
+            <div className='flex justify-center'>
+            <div className='w-1/2 flex flex-col pb-12'>
+                <input
+                    placeholder='Nome do NFT'
+>>>>>>> feat
                     className='mt-8 border rounded p-4'
                     onChange={e => updateFormInput({ ...formInput, name: e.target.value })}
                 />
                 <textarea
+<<<<<<< HEAD
                     placeholder='Asset Description'
+=======
+                    placeholder='Descrição do NFT'
+>>>>>>> feat
                     className='mt-2 border rounded p-4'
                     onChange={e => updateFormInput({ ...formInput, description: e.target.value })}
                 />
                 <input
+<<<<<<< HEAD
                     placeholder='Asset Price in Matic'
+=======
+                    placeholder='Preço em Ethereum'
+>>>>>>> feat
                     className='mt-8 border rounded p-4'
                     onChange={e => updateFormInput({ ...formInput, price: e.target.value })}
                 />
@@ -105,10 +126,27 @@ export default function CreateItem() {
                 }
                 <button
                     onClick={createMarket}
+<<<<<<< HEAD
                     className='font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg'>
                     Create Digital Asset
                 </button>
             </div>
         </div>
+=======
+                    className='font-bold mt-4 bg-green-500 text-white rounded p-4 shadow-lg'>
+                    Criar NFT
+                </button>
+            </div>
+        </div>
+        )
+    }
+
+    return (
+        <div>
+           <Header/>
+           {renderizarCriarItens()}
+
+        </div>
+>>>>>>> feat
     )
 }
