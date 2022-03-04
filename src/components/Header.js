@@ -15,22 +15,22 @@ export default function Header() {
         <nav>
           <div className={styles.grid}>
               <ul>
-                <Link href={"/"} className={styles.topnav_a} className='flex-center p-6'>
+                <Link href={"/"} className={styles.topnav_a} >
                   Home
                 </Link>
               </ul>
               <ul>
-                <Link href={"/create-item"} className={styles.topnav_a} className='flex-center p-6'>
+                <Link href={"/create-item"} className={styles.topnav_a}>
                   Criar NFT
                 </Link>
               </ul>
               <ul>
-                <Link href={"/my-assets"} className={styles.topnav_a} className='flex-center p-6'>
+                <Link href={"/my-assets"} className={styles.topnav_a}>
                   Minha Coleção NFT
                 </Link>
               </ul>
               <ul>
-                <Link href={"/creator-dashboard"} className={styles.topnav_a} className='flex-center p-6'>
+                <Link href={"/creator-dashboard"} className={styles.topnav_a}>
                   NFTs Criados
                 </Link>
               </ul>
