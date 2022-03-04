@@ -6,28 +6,10 @@ const rinkebyAPI = process.env.rinkebyAPI;
 
 module.exports = {
   networks: {
-<<<<<<< HEAD
-    hardhat: {
-      chainId: 1337
-    },
-    mumbai: {
-      url: `https://polygon-mumbai.infura.io/v3/${process.env.projectId}`,
-      accounts: [privateKey]
-    },
-    mainnet: {
-      url: `https://polygon-mumbai.infura.io/v3/${process.env.projectId}`,
-      accounts: [privateKey]
-    },
-    rinkeby: {
-      url: `https://rinkeby.infura.io/v3/${rinkebyAPI}`,
-      accounts: [`${privateKey}`]
-    },
-=======
     rinkeby: {
         url: `https://rinkeby.infura.io/v3/${rinkebyAPI}`,
         accounts: [`${privateKey}`]
       },
->>>>>>> feat
   },
   solidity: "0.8.4",
 };

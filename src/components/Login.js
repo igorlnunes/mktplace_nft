@@ -11,7 +11,7 @@ function Login() {
       <div className={styles.login_container}>
         
         <div className={styles.login_card}>
-        <div className='text-2xl center text-rgba(108,226,0,255)'>
+        <div className='text-2xl center'>
           Marketplace Web3Dev
         </div>
           <Image src={icon} width={100} height={100}></Image>

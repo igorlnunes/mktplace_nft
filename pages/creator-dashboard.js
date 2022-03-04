@@ -2,16 +2,10 @@ import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Web3Modal from 'web3modal'
-
 import { nftaddress, nftmarketaddress } from '../config'
-
+import Header from '../src/components/Header'
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import NFTMarket from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
-<<<<<<< HEAD
-=======
-import Header from '../src/components/Header'
-import Head from 'next/head'
->>>>>>> feat
 
 export default function CreatorDashboard() {
     const [nfts, setNfts] = useState([])
@@ -51,54 +45,25 @@ export default function CreatorDashboard() {
         setNfts(items)
         setLoadingState('loaded')
     }
-<<<<<<< HEAD
-    if (loadingState === 'loaded' && !nfts.length) return (<h1 className='py-10 px-20 text-3xl'>No assets created</h1>)
-    return (
+    if (loadingState === 'loaded' && !nfts.length) return (
         <div>
-            <div className='p-4'>
-                <h2 className='text-2xl py-2'>Items Created</h2>
-=======
-    if (loadingState === 'loaded' && !nfts.length) {return (
-        // <h1 className='px-20 py-10 
-        //     text-3xl'>No assets owned</h1>
-        <div>
-            <Head key={103}>
-              <title>Web3Dev Marketplace</title>
-            </Head>
-            <Header key={203}/>
-            <h1 className='px-20 py-10 
-        //     text-3xl flex-center'>Nenhum NFT criado</h1>
-      
-          </div>
-        )} else {return (
-            <div>
-            <Head key={103}>
-              <title>Web3Dev Marketplace</title>
-            </Head>
-            <Header key={203}/>
-            {renderizarDashboard()}
-      
-          </div>
-        )
-        }
+            <Header/>
+            <h1 className='py-10 px-20 text-3xl'>Não possui nenhum NFT</h1>
+        </div>
+    )
     
     function renderizarDashboard() {
         return (
             <div>
             <div className='p-4'>
                 <h2 className='text-2xl py-2'>Items Criados</h2>
->>>>>>> feat
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4'>
                     {
                         nfts.map((nft, i) => (
                             <div key={i} className='border shadow rounded-xl overflow-hidden'>
                                 <img src={nft.image} className='rounded' />
                                 <div className='p-4 bg-black'>
-<<<<<<< HEAD
-                                    <p className='text-2xl mb-4 font-bold text-white'>Price - {nft.price} Matic</p>
-=======
                                     <p className='text-2xl mb-4 font-bold text-white'>Preço - {nft.price} ETH</p>
->>>>>>> feat
                                 </div>
                             </div>
                         ))
@@ -109,22 +74,14 @@ export default function CreatorDashboard() {
                 {
                     Boolean(sold.length) && (
                         <div>
-<<<<<<< HEAD
-                            <h2 className='text-2xl py-2'>Items Solds</h2>
-=======
                             <h2 className='text-2xl py-2'>Items Vendidos</h2>
->>>>>>> feat
                             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4'>
                                 {
                                     sold.map((nft, i) => (
                                         <div key={i} className='border shadow rounded-xl overflow-hidden'>
                                             <img src={nft.image} className='rounded' />
                                             <div className='p-4 bg-black'>
-<<<<<<< HEAD
-                                                <p className='text-2xl font-bold text-white'>Price - {nft.price} Matic</p>
-=======
                                                 <p className='text-2xl font-bold text-white'>Preço - {nft.price} ETH</p>
->>>>>>> feat
                                             </div>
                                         </div>
                                     ))
@@ -135,13 +92,8 @@ export default function CreatorDashboard() {
                 }
             </div>
         </div>
-<<<<<<< HEAD
-    )
-}
-=======
         )
-    }
-
+            }
     return (
         <div>
            <Header/>
@@ -149,6 +101,5 @@ export default function CreatorDashboard() {
     
         </div>
     )
-}
+    }
 
->>>>>>> feat
