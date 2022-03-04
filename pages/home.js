@@ -20,7 +20,7 @@ export default function Home() {
   }, [])
 
   async function loadNFTs() {
-    const provider = new ethers.providers.JsonRpcProvider("https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161")
+    const provider = new ethers.providers.JsonRpcProvider("https://rinkeby.infura.io/v3/3740d118c75f4da08308dea88e9d932a")
     const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider) 
     const marketContract = new ethers.Contract(nftmarketaddress, NFTMarket.abi, provider)
     const data = await marketContract.fetchMarketItems()
